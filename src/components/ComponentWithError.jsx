@@ -10,7 +10,7 @@ export const ComponentWithError = () => {
         <div className='container'>
             <h3>Получение 500 ошибки</h3>
             <p>
-                { error && `{status: ${error}}` }
+                { error && `{ Error status: ${error}! }` }
             </p>
         </div>
     )

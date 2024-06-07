@@ -12,11 +12,11 @@ export const useJsonFetch = (url, opts) => {
         fetch(`${url}${opts}`)
             .then(response => {
                 if (!response.ok) {
-                    throw new Error(`Error! Status: ${response.status}`)
+                    throw new Error(`${response.statusText}`)
                 }
                 return response.json()
             })
-            .then(data => setData(data))
+            .then(data => setData(data.status))
             .catch((error) => {
                 setError(error.message)
             })
